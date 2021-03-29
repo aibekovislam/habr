@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form">
+	<form method="POST">
+		{% csrf_token %}
+		<div class="mb-3 mt-3">
+    	<h3 class="fw-bold text-center mb-4">Добавьте статью</h3><hr>
+    	<input type="text" name="title" class="added_input mb-5 mt-5" placeholder="Напишите название статьи">
+    	<input type="text" name="text" class="added_input2 mb-5" placeholder="Напишите статью">
+    	<input type="text" name="date" class="added_input3 mb-5" placeholder="Напишите дату создание статьи">
+    	<button class="btn_2 btn-success">Добавить статью</button>
+  		</div>
+	</form>
+</div>
+{% endblock %}

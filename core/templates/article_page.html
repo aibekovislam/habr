@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-dark mt-3" role="alert">
+  	<h1 class="fw-bold">{{ article.title }}</h1>
+    <div>{{ article.text }}</div>
+    <hr>
+    <p class="fw-bold">Просмотры: {{ article.views }}</p>
+    <p class="fw-bold">Дата и время: {{ article.created_at }}</p>
+    <p class="fw-bold">Изменено: {{ article.update_at }}</p>
+    <p class="fw-bold">Автор: 
+    	<ul>
+    		<li>Псевдоним - {{ article.author.nik }} </li>
+    		<li>Логин - {{ article.author.user.username }}</li>
+    	</ul>
+    </p>
+</div>
+
+    <a href="{% url 'articles_edit' article.id %}" class="btn btn-warning mt-3">Редактировать</a>
+    <a href="{% url 'delete_news' article.id %}" class="btn btn-danger mt-3">Удалить</a>
+    <a href="{% url 'articles' %}" class="btn btn-success mt-3">Назад</a>
+{% endblock %}

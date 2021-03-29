@@ -1,0 +1,127 @@
+.bg-custom{
+
+}
+
+
+body{
+	background-color: black;
+	color: white;
+}
+
+.logo{
+	font-weight: 700;
+	font-size: 30px;
+}
+
+
+.logo:hover{
+	transition-duration: 0.3s;
+	animation-name: letter;
+	animation-duration: 0.3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+
+.zago{
+	animation-name: letter;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.authors{
+	color: white;
+	transition-duration: 0.3s;
+	display: inline-block;
+}
+.authors:hover{
+	letter-spacing: 3px;
+}
+
+.btn{
+	border-radius: 25px;
+}
+
+.form-control{
+	border-radius: 25px;
+}
+
+a{
+	color: white;
+}
+
+.btn_2{
+	position: relative;
+	left: 175px;
+	text-decoration: none;
+	width: 250px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+}
+
+.form{
+	position: relative;
+	top: 100px;
+	left: 370px;
+	width: 600px;
+	height: 530px;
+	border: 1px solid white;
+}
+
+.added_input{
+	position: relative;
+	left: 20px;
+	width: 555px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+}
+
+.added_input2{
+	position: relative;
+	left: 20px;
+	width: 555px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+}
+
+.added_input3{
+	position: relative;
+	left: 20px;
+	width: 555px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+}
+
+::-webkit-input-placeholder {
+	text-align:center;
+}
+
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+input {
+	text-align: center;
+}
+
+input, textarea {
+	outline: none;
+	border: none;
+}
+
+@keyframes letter {
+	0%{
+		letter-spacing: 0px;
+	}
+	100%{
+		letter-spacing: 3px;
+	}
+}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center fw-bold display-3">Статьи</h1>
+    <hr>
+    <ul>
+    {% for article in articles %}
+        <a href="{% url 'article' article.id %}" class="fw-bold display-5 text-decoration-none"><li>{{ article.title }}</li></a>
+    {% endfor %}
+    </ul>
+{% endblock %}
