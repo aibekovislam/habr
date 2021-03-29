@@ -67,4 +67,11 @@ def add_article(request):
 def delete_article(request, id):
     article = Article.objects.get(pk=id)
     article.delete()
-    return HttpResponse("Успешно удалено!")
+    return redirect(articles)
+
+
+
+def search(request):
+    word = request.GET.get("word")
+    articles = Article.objects.filter(title__contains=word, is_active=True)
+    return render(request, "articles.html", {"articles": articles})

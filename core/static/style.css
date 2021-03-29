@@ -64,10 +64,11 @@ a{
 .form{
 	position: relative;
 	top: 100px;
-	left: 370px;
-	width: 600px;
-	height: 530px;
+	left: 300px;
+	width: 700px;
+	height: 600px;
 	border: 1px solid white;
+	padding: 50px;
 }
 
 .added_input{
@@ -79,14 +80,6 @@ a{
 	border: none;
 }
 
-.added_input2{
-	position: relative;
-	left: 20px;
-	width: 555px;
-	height: 50px;
-	border-radius: 25px;
-	border: none;
-}
 
 .added_input3{
 	position: relative;

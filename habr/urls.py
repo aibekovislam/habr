@@ -14,5 +14,6 @@ urlpatterns = [
     path("about/", about, name="about"),
     path("article/<int:pk>/edit/", edit_article, name='articles_edit'),
     path("article_add/", add_article, name='news_home'),
-    path("article/<int:id>/delete/", delete_article, name='delete_news' )
+    path("article/<int:id>/delete/", delete_article, name='delete_news' ),
+    path("search/", search, name='search')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
