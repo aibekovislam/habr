@@ -36,6 +36,7 @@ class Article(models.Model):
     )
 
 
+
     def __str__(self):
         return self.title
 
@@ -51,6 +52,8 @@ class Author(models.Model):
     )
 
     nik = models.CharField(max_length=55)
+
+    photo = models.ImageField(upload_to="author_photo", null=True, blank=True, verbose_name='Аватарка автора')
 
     class Meta:
         verbose_name = "Автор"
