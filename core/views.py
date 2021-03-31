@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .models import Article, Author
+from django.db.models import Q
 
 def articles(request):
     articles = Article.objects.all()
@@ -73,5 +74,7 @@ def delete_article(request, id):
 
 def search(request):
     word = request.GET.get("word")
-    articles = Article.objects.filter(title__contains=word, is_active=True)
+    articles = Article.objects.filter(
+        Q(title__icontains=word) | Q(text__icontains=word),
+        is_active=True)
     return render(request, "articles.html", {"articles": articles})
