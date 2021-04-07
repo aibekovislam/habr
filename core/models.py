@@ -62,3 +62,12 @@ class Author(models.Model):
     def __str__(self):
         return self.nik
 
+
+
+class Article_image(models.Model):
+    img = models.ImageField(upload_to="article_image")
+    article = models.ForeignKey(
+        to=Article,
+        on_delete=models.CASCADE,
+        related_name= "articles",
+    )

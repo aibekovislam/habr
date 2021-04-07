@@ -3,10 +3,11 @@
 
 {% block content %}
 
+
     <h1 class="fw-bold display-2 text-center">Авторы</h1>
 <a href="#" class="authors fw-bold display-5 text-decoration-none">
     {% for author in authors %}
-        <li>{{ author.nik }}</li>
+        <a href="{% url 'author' author.id %}">{{ author.nik }}</a>
     {% endfor %}
     </a>
 {% endblock %}

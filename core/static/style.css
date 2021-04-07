@@ -1,11 +1,329 @@
-.bg-custom{
 
+*,
+*:before,
+*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html,
+body{
+	font-family: 'Lexend', sans-serif;
+	height: 100%;
+	color: black;
+	background-color: white;
+}
+
+.ulka{
+	margin-top: 400px;
+}
+
+.big-habr{
+	position: absolute;
+	left: 190px;
+	bottom: 10px;
+	font-size: 400px;
+	color: white;
+	opacity: 1;
+}
+
+.big-habr2{
+	position: absolute;
+	left: 730px;
+	bottom: 10px;
+	font-size: 400px;
+	color: black;
+	opacity: 1;
 }
 
 
-body{
+input, textarea {
+	outline: none;
+	border: none;
+	border: solid 1px #f2f2f2;
+}
+
+input {outline:none;}
+
+.btn-index5{
+	position: absolute;
+	left: 250px;
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+}
+
+.btn-index5:hover{
 	background-color: black;
 	color: white;
+	box-shadow: 0 0 70px #adadad;
+}
+
+.btn-index6{
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+	margin-top: 20px;
+}
+
+.btn-index6:hover{
+	background-color: black;
+	color: white;
+	box-shadow: 0 0 70px #adadad;
+}
+
+
+.btn-index7{
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+	margin-top: 20px;
+}
+
+
+
+.btn-index7:hover{
+	background-color: black;
+	color: white;
+	box-shadow: 0 0 70px #adadad;
+}
+
+
+.zago2{
+	font-weight: bolder;
+	font-size: 60px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.hrr2{
+	margin-bottom: 10px;
+}
+#navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#navbar li { display: inline; }
+
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 1200px;
+  text-align: center;
+  font-weight: bolder;
+}
+#navbar a {
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  width: 190px;
+}
+
+.navbar-custom{
+	margin-top: 30px;
+	padding-right: 70px;
+}
+
+.btn-index2{
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	color: black;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+}
+
+.btn-index2:hover{
+	background-color: black;
+	color: white;
+}
+
+.btn-1{
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	color: black;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+	margin-right: 10px;
+}
+
+.btn-2{
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	color: black;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+	margin-right: 10px;
+}
+
+.btn-3{
+	width: 170px;
+	height: 40px;
+	border-radius: 25px;
+	border: 1px solid black;
+	color: black;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+}
+
+.hrr{
+	border: none;
+	position: absolute;
+	left: 1100px;
+	bottom: 525px;
+	width: 600px;
+	height: 3px;
+	background-color: black;
+	z-index: 3;
+}
+
+
+.btn-index{
+	position: absolute;
+	left: 1450px;
+	bottom: 337px;
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: black;
+	color: white;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Lexend', sans-serif;
+	letter-spacing: 1px;
+	transition-duration: 0.5s;
+}
+
+
+.btn-index:hover{
+	box-shadow: 0 0 70px #adadad;
+	background-color: white;
+	color: black;
+}
+
+.text_zago{
+	position: absolute;
+	left: 1100px;
+	bottom: 420px;
+	font-family: 'Lexend', sans-serif;
+}
+
+.zago{
+	position: absolute;
+	left: 1500px;
+	bottom: 550px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: 'Lexend', sans-serif;
+	z-index: 2;
+	color: black;
+	transition-duration: 0.5s;
+}
+
+.zago:hover{
+	letter-spacing: 7px;
+}
+
+
+.rectangle{
+	width: 220px;
+    height: 120px;
+    background: black;
+    position: absolute;
+    left: 1300px;
+    bottom: 817px;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+
+}
+
+.img_main{
+	position: relative;
+	right: 400px;
+	bottom: 100px;
+	z-index: 1;
+}
+
+.fulscreen{
+	padding: 20px 0;
+	min-height: 100vh;
+	display: flex;
+	color: black;
 }
 
 .logo{
@@ -23,15 +341,8 @@ body{
 }
 
 
-.zago{
-	animation-name: letter;
-	animation-duration: 0.5s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
 .authors{
-	color: white;
+	color: black;
 	transition-duration: 0.3s;
 	display: inline-block;
 }
@@ -48,7 +359,13 @@ body{
 }
 
 a{
-	color: white;
+	color: black;
+	transition-duration: 0.5s;
+}
+
+a:hover{
+	color: black;
+	letter-spacing: 3px;
 }
 
 .btn_2{
@@ -59,6 +376,11 @@ a{
 	height: 50px;
 	border-radius: 25px;
 	border: none;
+}
+
+.photo_user{
+	width: 500px;
+	height: 650px;
 }
 
 .form{
@@ -110,11 +432,3 @@ input, textarea {
 	border: none;
 }
 
-@keyframes letter {
-	0%{
-		letter-spacing: 0px;
-	}
-	100%{
-		letter-spacing: 3px;
-	}
-}

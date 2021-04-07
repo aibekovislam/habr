@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="fw-bold">Автор: {{ author.user }}</h2>
+<h4 class="fw-bold">Псевдоним {{ author.nik }}</h4>
+	{% if author.photo %}
+		<div>
+			<img src="{{ author.photo.url }}" class="img-fluid photo_user">
+		</div>
+	{% endif %}
+{% endblock %}

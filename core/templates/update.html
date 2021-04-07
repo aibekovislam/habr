@@ -3,11 +3,16 @@
 {% block content %}
 <form method="POST">
 	{% csrf_token %}
-	<input type="text" name="title" value="{{ article.title }}">
-	<br><br>
-	<textarea name="text" cols="30" rows="10" >{{ article.text }}</textarea>
-	<br><br>
-	<button class="btn btn-danger">Сохранить</button><br><br>
-	<button class="btn btn-success">Назад</button>
+	<div class="input-group mb-3 mt-5">
+  <span class="input-group-text" id="basic-addon1">Header article</span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="title" value="{{ article.title }}">
+	</div>
+	<div class="input-group mb-3">
+  <span class="input-group-text">Text article</span>
+  <textarea class="form-control" aria-label="With textarea" name="text">{{ article.text }}</textarea>
+</div>
+	<div class="input-group">
 </form>
+	<button class="btn-index6">Сохранить</button>
+	<button class="btn-index7">Назад</button>
 {% endblock %}

@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="text-center fw-bold display-3">Статьи</h1>
-    <hr>
-    <ul>
     {% for article in articles %}
-        <a href="{% url 'article' article.id %}" class="fw-bold display-5 text-decoration-none"><li>{{ article.title }}</li></a>
+	    <div class="card mb-3 mt-5">
+	    	{% if article.picture %}
+			  <img src="{{ article.picture.url }}" class="card-img-top img-fluid">
+			{% endif %}
+			  <div class="card-body">
+			    <a href="{% url 'article' article.id %}" class="card-title fw-bold text-decoration-none">{{ article.title }}</a>
+			    <p class="card-text">{{ article.text }}</p>
+			    <p class="card-text"><small class="text-muted">{{ article.data }}</small></p>
+			    <a href="{% url 'article' article.id %}" class="btn-index2">Читать</a>
+			  </div>
+			</div>
     {% endfor %}
-    </ul>
 {% endblock %}

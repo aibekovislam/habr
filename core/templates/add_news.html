@@ -4,13 +4,17 @@
 <div class="form">
 	<form method="POST">
 		{% csrf_token %}
-		<div class="mb-3 mt-3">
-    	<h3 class="fw-bold text-center mb-4">Добавьте статью</h3><hr>
-    	<input type="text" name="title" class="added_input mb-5 mt-5" placeholder="Напишите название статьи">
-    	<textarea name="text" class="form-control mb-5" id="exampleFormControlTextarea1" rows="3"></textarea>
-    	<input type="text" name="date" class="added_input3 mb-5" placeholder="Напишите дату создание статьи">
-    	<button class="btn_2 btn-success">Добавить статью</button>
-  		</div>
+		<h3 class="zago2">Add article</h3><hr class="hrr2"><br>		
+			<div class="input-group mb-3">
+				  <span class="input-group-text" id="basic-addon1">Заголовок статьи</span>
+				  <input type="text" class="form-control" placeholder="Название статьи" aria-label="Username" aria-describedby="basic-addon1" name="title">
+				</div>
+
+				<div class="input-group">
+				  <span class="input-group-text">Текст статьи</span>
+				  <textarea class="form-control" aria-label="With textarea" name="text"></textarea>
+				</div>
+				<br>
+			<button class="btn-index5">Add</button>
 	</form>
-</div>
 {% endblock %}

@@ -1,16 +1,20 @@
-{% extends 'base.html' %}
-
-{% block content %}
-
-
-<div class="container">
-	<div class="row align-items-center">
-		<div class="col-6">
-			<h1 class="zago fw-bold display-3 mt-5">Хабр - Reddit для программистов</h1>
-		</div>
-		<div class="col-6">
-			<img src="https://99px.ru/sstorage/53/2012/08/tmb_46734_3290.jpg" class="img-fluid mt-5">
-		</div>
-	</div>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="static/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<img src="https://images.unsplash.com/photo-1617634057683-20bab162347c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="main" height="937" class="main_img">
+	<h1 class="zago">Habr</h1><hr class="hrr">
+	<p class="text_zago">Habr (formerly Habrahabr) is a Russian-language website in the format of a system <br> of thematic collective blogs (called hubs) with elements of a news site, created to <br> publish news, analytical  articles, thoughts related to information technology, business <br> and the Internet publish news, analytical  articles, thoughts related to information.</p>
+	<a href="{% url 'articles' %}" class="btn-index">Read articles</a>
+	<div class="rectangle">HABR</div>
+	<h1 class="big-habr">HA</h1>
+	<h1 class="big-habr2">BR</h1>
+</body>
+</html>

@@ -52,8 +52,7 @@ def add_article(request):
     if request.method == "POST":
         title = request.POST["title"]
         text = request.POST["text"]
-        date = request.POST["date"]
-        article = Article(title=title, text=text , date=date)
+        article = Article(title=title, text=text)
         user = request.user
         if not Author.objects.filter(user=user).exists():
             author = Author(user=user, nik=user.username)
@@ -78,3 +77,12 @@ def search(request):
         Q(title__icontains=word) | Q(text__icontains=word),
         is_active=True)
     return render(request, "articles.html", {"articles": articles})
+
+
+def author(request, pk):
+    author = Author.objects.get(pk=pk)
+    return render(
+        request,
+        "author_page.html",
+        {"author": author}
+    )

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="alert alert-dark mt-3" role="alert">
+<div class="alert alert-dark mt-5" role="alert">
   	<h1 class="fw-bold">{{ article.title }}</h1>
     <div>{{ article.text }}</div>
     <hr>
@@ -14,10 +14,15 @@
     		<li>Логин - {{ article.author.user.username }}</li>
     	</ul>
     </p>
-    <img src="{{ article.picture.url }}" class="img-fluid">
+
+    {% if article.picture %}
+    <img src="{{ article.picture.url }}" class="img-fluid photo_user">
+    {% endif %}
+
 </div>
 
-    <a href="{% url 'articles_edit' article.id %}" class="btn btn-warning mt-3">Редактировать</a>
-    <a href="{% url 'delete_news' article.id %}" class="btn btn-danger mt-3">Удалить</a>
-    <a href="{% url 'articles' %}" class="btn btn-success mt-3">Назад</a>
+    <a href="{% url 'articles_edit' article.id %}" class="btn-1 mt-3">Изменить</a>
+    <a href="{% url 'delete_news' article.id %}" class="btn-2 mt-3">Удалить</a>
+    <a href="{% url 'articles' %}" class="btn-3 mt-3">Назад</a>
 {% endblock %}
+
