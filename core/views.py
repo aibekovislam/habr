@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .models import Article, Author
 from django.db.models import Q
+from django.contrib.auth import authenticate, login, logout, get_user_model
+
+
+User = get_user_model()
+
 
 def articles(request):
     articles = Article.objects.all()
@@ -86,3 +91,34 @@ def author(request, pk):
         "author_page.html",
         {"author": author}
     )
+
+
+def sign_in(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return redirect('articles')
+    return render(request, "login.html")
+
+
+def sign_out(request):
+    logout(request)
+    return redirect(sign_in)
+
+
+def reg(request):
+    if request.method == 'GET':
+        return render(request, "register.html")
+    elif request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        User.objects.create_user(
+            username=username,
+            password=password
+            )
+        return redirect(sign_in)
+    

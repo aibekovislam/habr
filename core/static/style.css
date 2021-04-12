@@ -20,13 +20,73 @@ body{
 	margin-top: 400px;
 }
 
+.login{
+	position: absolute;
+	right: 720px;
+	border: 1px solid black;
+	top: 300px;
+	width: 500px;
+	height: 60px;
+	border-radius: 30px;
+	transition-duration: 0.5s;
+}
+
+
+.password{
+	position: absolute;
+	right: 720px;
+	border: 1px solid black;
+	top: 400px;
+	width: 500px;
+	height: 60px;
+	border-radius: 30px;
+	transition-duration: 0.5s;
+}
+
+.btn-log{
+	position: absolute;
+	right: 720px;
+	border: 1px solid black;
+	top: 500px;
+	width: 500px;
+	height: 60px;
+	border-radius: 30px;
+	transition-duration: 0.5s;
+}
+
+.zago-log{
+	font-family: 'Lexend', sans-serif;
+	position: absolute;
+	right: 800px;
+	top: 200px;
+	font-weight: 100px;
+}
+
+
+.password:hover{
+	letter-spacing: 2px;
+	background-color: black;
+	color: white;
+}
+
+.login:hover{
+	letter-spacing: 2px;
+	background-color: black;
+	color: white;
+}
+
+.btn-log:hover{
+	letter-spacing: 2px;
+	background-color: black;
+	color: white;
+}
+
 .big-habr{
 	position: absolute;
 	left: 190px;
 	bottom: 10px;
 	font-size: 400px;
 	color: white;
-	opacity: 1;
 }
 
 .big-habr2{
@@ -35,7 +95,6 @@ body{
 	bottom: 10px;
 	font-size: 400px;
 	color: black;
-	opacity: 1;
 }
 
 
@@ -145,7 +204,7 @@ input {outline:none;}
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 1200px;
+  width: 1445px;
   text-align: center;
   font-weight: bolder;
 }
@@ -154,6 +213,24 @@ input {outline:none;}
   text-decoration: none;
   display: inline-block;
   width: 190px;
+}
+
+.url_reg{
+	position: absolute;
+	color: black;
+	left: 887px;
+	top: 590px;
+	text-decoration: none;
+	transition-duration: 0.1s;
+}
+
+a{
+	color: black;
+}
+
+.url_reg:hover{
+	color: blue;
+	border-bottom: 1px solid blue;
 }
 
 .navbar-custom{
@@ -283,7 +360,6 @@ input {outline:none;}
 	bottom: 550px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	font-family: 'Lexend', sans-serif;
 	z-index: 2;
 	color: black;
 	transition-duration: 0.5s;
@@ -358,15 +434,6 @@ input {outline:none;}
 	border-radius: 25px;
 }
 
-a{
-	color: black;
-	transition-duration: 0.5s;
-}
-
-a:hover{
-	color: black;
-	letter-spacing: 3px;
-}
 
 .btn_2{
 	position: relative;
