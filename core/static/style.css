@@ -20,6 +20,21 @@ body{
 	margin-top: 400px;
 }
 
+.img-acc{
+	position: relative;
+	left: 1795px;
+	bottom: 25px;
+}
+
+.hello{
+	position: relative;
+	left: 1660px;
+	bottom: 22px;
+	text-decoration: none;
+	font-weight: bolder;
+	margin-right: 10px;
+}
+
 .login{
 	position: absolute;
 	right: 720px;
@@ -175,7 +190,6 @@ input {outline:none;}
 }
 
 
-
 .btn-index7:hover{
 	background-color: black;
 	color: white;
@@ -192,6 +206,12 @@ input {outline:none;}
 .hrr2{
 	margin-bottom: 10px;
 }
+
+.articles{
+	position: relative;
+	margin-top: 70px;
+}
+
 #navbar {
   margin: 0;
   padding: 0;
@@ -204,7 +224,7 @@ input {outline:none;}
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 1445px;
+  width: 1458px;
   text-align: center;
   font-weight: bolder;
 }
@@ -213,6 +233,17 @@ input {outline:none;}
   text-decoration: none;
   display: inline-block;
   width: 190px;
+  margin-top: 10px;
+}
+
+
+a:hover{
+	color: black;
+	text-shadow: 0 0 70px #adadad;
+}
+
+a{
+	transition-duration: 0.5s;
 }
 
 .url_reg{

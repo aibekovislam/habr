@@ -121,4 +121,10 @@ def reg(request):
             password=password
             )
         return redirect(sign_in)
+
+
+
+
+def acc(request):
+    return render(request, "account.html")
     

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="acc">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-6">
+				<img src="{{request.author.photo.url}}" alt="account_image" class="img-acc">
+			</div>
+			<div class="col-6">
+				<h3 class="zago-acc">
+					{{ request.user.username }}
+				</h3>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
