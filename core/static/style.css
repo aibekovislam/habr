@@ -26,6 +26,11 @@ body{
 	bottom: 25px;
 }
 
+
+.zago-article{
+	font-family: 'Comfortaa', cursive;
+}
+
 .hello{
 	position: relative;
 	left: 1660px;

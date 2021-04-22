@@ -57,7 +57,8 @@ def add_article(request):
     if request.method == "POST":
         title = request.POST["title"]
         text = request.POST["text"]
-        article = Article(title=title, text=text)
+        picture = request.FILES.get('picture')
+        article = Article(title=title, text=text, picture=picture)
         user = request.user
         if not Author.objects.filter(user=user).exists():
             author = Author(user=user, nik=user.username)

@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="form">
-	<form method="POST">
+	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		<h3 class="zago2">Add article</h3><hr class="hrr2"><br>		
 			<div class="input-group mb-3">
@@ -15,6 +15,8 @@
 				  <textarea class="form-control" aria-label="With textarea" name="text"></textarea>
 				</div>
 				<br>
+				<input type="file" name="picture" class="files-add">
+				<br><br>
 			<button class="btn-index5">Add</button>
 	</form>
 {% endblock %}
