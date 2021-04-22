@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from .models import Article, Author
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 
 User = get_user_model()
@@ -46,7 +46,8 @@ def homepage(request):
 
 def edit_article(request, pk):
     article = Article.objects.get(id=pk)
-
+    if not request.user == article.author.user:
+        return HttpResponse('<h2>У вас нет прав на это действие</h2>')
     if request.method == "POST":
         article.title = request.POST.get("title")
         article.text = request.POST.get("text")
@@ -72,6 +73,12 @@ def add_article(request):
     return render(request, "add_news.html")
 
 
+def is_author(user):
+    if not user.is_authenticated:
+        return False
+    return Author.objects.filter(user=user).exists()
+
+@user_passes_test(is_author)
 def delete_article(request, id):
     article = Article.objects.get(pk=id)
     article.delete()

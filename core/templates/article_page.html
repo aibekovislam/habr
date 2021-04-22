@@ -20,9 +20,10 @@
     {% endif %}
 
 </div>
-
+    {% if request.user == article.author.user %}
     <a href="{% url 'articles_edit' article.id %}" class="btn-1 mt-3">Изменить</a>
     <a href="{% url 'delete_news' article.id %}" class="btn-2 mt-3">Удалить</a>
     <a href="{% url 'articles' %}" class="btn-3 mt-3">Назад</a>
+    {% endif %}
 {% endblock %}
 
