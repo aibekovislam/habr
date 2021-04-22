@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from .models import Article, Author
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth.decorators import login_required
 
 
 User = get_user_model()
@@ -9,6 +10,7 @@ User = get_user_model()
 
 def articles(request):
     articles = Article.objects.all()
+    articles = Article.objects.order_by('-date')
     return render(
         request,
         "articles.html",
@@ -52,7 +54,7 @@ def edit_article(request, pk):
         return redirect(article_page, pk)
     return render(request, "update.html", {"article": article})
 
-
+@login_required(login_url = '/login/')
 def add_article(request):
     if request.method == "POST":
         title = request.POST["title"]
