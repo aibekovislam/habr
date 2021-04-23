@@ -3,7 +3,7 @@
 {% block content %}
 <div class="alert alert-dark mt-5" role="alert">
   	<h1 class="fw-bold">{{ article.title }}</h1>
-    <div>{{ article.text }}</div>
+    <div>{{ article.text|linebreaks }}</div>
     <hr>
     <p class="fw-bold">Просмотры: {{ article.views }}</p>
     <p class="fw-bold">Дата и время: {{ article.created_at }}</p>
